@@ -1,0 +1,37 @@
+1) Посмотреть где я (pwd)
+2) Создать папку (mkdir work)
+3) Зайти в папку (cd work)
+4) Создать 3 папки (mkdir work1 work2 work3)
+5) Зайти в любоую папку (cd work1)
+6) Создать 5 файлов (3 txt, 2 json)  (touch work1.txt work2.txt work3.txt work1.json work2.json)
+7) Создать 3 папки (mkdir work1 work2 work3)
+8. Вывести список содержимого папки (ls)(ls -la)
+9) Открыть любой txt файл (cat >work1.txt)(vim work1.txt)
+10) + написать туда что-нибудь, любой текст. (doing homework)(i doing homework)
+11) + сохранить и выйти. (ctrl c)(esc :wq)
+12) Выйти из папки на уровень выше (cd ..)
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. (mv work1/work1.txt work2/work.txt)(mv work1/work1.json work2/work1.json)
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. (cp work1/work2.txt work3/work2.txt)(cp work2/work1.json work3/work1.json)
+15) Найти файл по имени (find . -name "work*")
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. ( tail -f work2.txt)
+17) вывести несколько первых строк из текстового файла (head -2 work1.txt)
+18) вывести несколько последних строк из текстового файла (tail -2 work1.txt)
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. (less work2/work1.txt)
+20) вывести дату и время (date)
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request (curl "http://162.55.220.72:5005/get_method?name=Alexandr&age=26")
+2) Написать скрипт который выполнит автоматически пункты 2, 3, 4, 5, 6, 7, 8, 13 
+(touch myscript)(vim my script)
+#!/bin/bash
+cd work
+mkdir work1 work2 work3
+cd work1
+touch work1.txt work2.txt work3.txt work1.json work2.json
+mkdir work1 work2 work3
+ls
+mv work1.txt work2/work1.txt
+mv work1.json work3/work1.json
+(esc) (:wq)
+(chmod +x ./myscript)
+(./myscript)
